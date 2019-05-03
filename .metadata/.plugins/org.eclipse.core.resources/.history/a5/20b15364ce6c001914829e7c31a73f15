@@ -1,0 +1,27 @@
+package MidChar;
+
+public class Main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		System.out.println(solution("helw"));
+	}
+	
+	public static String solution(String s) {
+	      String answer = "";
+	      
+	      char[] str = new char[s.length()];
+	      
+	      for(int i = 0; i < s.length(); i++) {
+	    	  str[i] = s.charAt(i);
+	      }
+	      
+	      if(s.length()%2 == 0)
+	    	  System.out.println(str[s.length()/2-1]+" " + str[s.length()/2+1]);
+
+	      else System.out.println(str[s.length()/2]);
+	      
+	      
+	      return answer;
+	  }
+}

@@ -1,0 +1,29 @@
+package Divisor;
+
+import java.util.Arrays;
+
+public class Main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int[] arr = { 5, 9, 7, 10 };
+		for(int i = 0; i < arr.length; i++)
+			System.out.println(solution(arr,5)[i]);
+	}
+
+	public static int[] solution(int[] arr, int divisor) {
+		int[] answer = {};
+		answer = new int[arr.length];
+		
+		int j = 0;
+		for (int i = 0; i < arr.length; i++) {
+			if ((arr[i] % divisor) == 0) {
+				answer[j++] = arr[i];
+			}
+		}
+
+		Arrays.sort(answer);
+
+		return answer;
+	}
+}

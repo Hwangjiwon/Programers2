@@ -1,0 +1,34 @@
+package LowerCase;
+
+import java.util.Arrays;
+
+public class Main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		System.out.println(solution("baeZfg"));
+	}
+	
+	  public static String solution(String s) {
+	      String answer = "";
+	      
+	      char[] c = new char[s.length()];
+	      
+	      for(int i = 0; i < s.length(); i++) {
+	    	  c[i] = s.charAt(i);
+	      }
+	      
+	      Arrays.sort(c);
+	      
+	      char[] rev = new char[s.length()];
+	      int j = c.length-1;
+	      for(int i = 0; i < s.length() && j >= 0; i++ , j--) {
+	    	  rev[i] = c[j];
+	    	  System.out.print(rev[i]);
+	      }
+	      
+	      answer = String.valueOf(c);
+	      
+	      return answer;
+	  }
+}

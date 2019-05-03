@@ -1,0 +1,17 @@
+package Sum;
+
+public class Main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int a = 3;
+		int b = 5;
+		
+		
+	}
+
+	public long solution(int a, int b) {
+	      long answer = 0;
+	      return answer;
+	  }
+}

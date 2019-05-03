@@ -1,0 +1,33 @@
+package NorS;
+
+import java.util.regex.Pattern;
+
+public class Main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		System.out.println(solution("ddd"));
+	}
+
+	public static boolean solution(String s) {
+		boolean answer = true;
+		
+		s = s.toLowerCase();
+		
+		String epattern = "^[a-z]*$";
+		String npattern = "^[0-9]*$";
+		
+		
+		boolean e = Pattern.matches(epattern, s);
+		boolean n = Pattern.matches(npattern, s);
+		
+		System.out.println(e);
+		System.out.println(n);
+		
+		if(e == true) answer = true;
+		else if(n == true) answer = true;
+
+		return answer;
+
+	}
+}

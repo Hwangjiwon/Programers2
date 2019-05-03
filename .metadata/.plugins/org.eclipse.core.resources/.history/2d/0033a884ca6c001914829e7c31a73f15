@@ -1,0 +1,15 @@
+package MidChar;
+
+class Solution {
+
+	public String solution(String s) {
+	      String answer = "";
+	      int len = s.length();
+	      
+	      if(len%2 == 0)
+	      
+	    
+		return answer;
+	  }
+
+}

@@ -1,0 +1,36 @@
+package NorS;
+
+import java.util.regex.Pattern;
+
+public class Main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		System.out.println(solution("dd22"));
+	}
+
+	public static boolean solution(String s) {
+		boolean answer;
+
+		if ((s.length() != 4) || (s.length() != 6)) {
+			answer = false;
+		} else if((s.length() == 4) || (s.length() == 6)){
+			
+			answer = true;
+			
+			s = s.toLowerCase();
+
+			String epattern = "^[a-z]*$";
+			String npattern = "^[0-9]*$";
+
+			boolean e = Pattern.matches(epattern, s);
+			boolean n = Pattern.matches(npattern, s);
+
+			System.out.println(e);
+			System.out.println(n);
+
+		}
+		return answer;
+
+	}
+}

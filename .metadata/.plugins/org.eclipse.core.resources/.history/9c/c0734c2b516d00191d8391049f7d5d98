@@ -1,0 +1,30 @@
+package Token;
+
+import java.util.StringTokenizer;
+
+public class Main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		System.out.println(solution("try hello world"));
+	}
+
+	 public static String solution(String s) {
+	      String answer = "";
+	      StringTokenizer tok = new StringTokenizer(s," ");
+	      String[] str = new String[tok.countTokens()];
+	      
+	      int cnt = 0;
+	      while(tok.hasMoreTokens()) {
+	    	  str[cnt] = tok.nextToken();
+	    	  cnt++;
+	      }
+	      
+	      for(int i = 0; i < cnt; i++) {
+	    	  System.out.println(str[cnt]);
+	      }
+	      
+	      
+	      return answer;
+	  }
+}

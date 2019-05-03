@@ -1,0 +1,28 @@
+package Token;
+
+import java.util.StringTokenizer;
+
+public class Main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		System.out.println(solution("try hello world"));
+	}
+
+	 public static String solution(String s) {
+	      String answer = "";
+	      StringTokenizer tok = new StringTokenizer(s," ");
+	      String[] str = new String[tok.countTokens()];
+	      
+	      for(int i = 0; i <= tok.countTokens(); i++) {
+	    	  str[i] = tok.nextToken();
+	    	  for(int j = 0; j < str[i].length(); j++) {
+	    		  if(j % 2 == 0) str[i].toUpperCase().charAt(j);
+	    		  else str[i].toLowerCase().charAt(j);
+	    	  }
+	    	  System.out.println(str[i]);
+	      }
+	      
+	      return answer;
+	  }
+}

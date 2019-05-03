@@ -1,0 +1,23 @@
+package NorS;
+
+
+public class Main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		System.out.println(solution("d23d"));
+	}
+
+	public static boolean solution(String s) {
+		boolean answer = true;
+		int len = 1;
+		
+		if(s.length() != 4) len = 0;
+		if(s.length() != 6) len = 0;
+		
+		if(len == 1) answer = true;
+		else answer = false;
+		
+		return answer;
+	}
+}
