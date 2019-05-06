@@ -1,0 +1,30 @@
+package SkillTree;
+
+public class Main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		String skill = "CBD";
+		String[] skill_trees = { "BACDE", "CBADF", "AECB", "BDA" };
+		System.out.println(solution(skill, skill_trees));
+	}
+
+	public static int solution(String skill, String[] skill_trees) {
+		int answer = 0;
+		char[] sk = new char[skill.length()];
+		for(int i = 0; i < skill.length(); i++)
+			sk[i] = skill.charAt(i);
+		
+		for(int i = 0; i < skill_trees.length; i++) {
+			System.out.println(skill_trees[i]);
+			int p = 0;
+			for(int j = 0; j < skill_trees[i].length(); j++) {
+				if(sk[p] != skill_trees[i].charAt(j)) {
+					System.out.println(" ");
+				}
+			}
+		}
+		
+		return answer;
+	}
+}
