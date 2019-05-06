@@ -1,19 +1,36 @@
 package Knum;
 
-class Solution {
-    public int[] solution(int[] array, int[][] commands) {
+import java.util.Arrays;
+
+public class Main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int[] array = {1,5,2,6,3,7,4};
+		int[][] commands = {{2,5,3},{4,4,1},{1,7,3}};
+		
+		System.out.println(solution(array,commands));
+	}
+
+	public static int[] solution(int[] array, int[][] commands) {
         int[] answer = {};
-        
-        for(int i = 0; i < commands.length; i++) {
-        	int[] com = new int[3];
-        	com[0] = commands[i][0]-1;
-        	com[1] = commands[i][1]-1;
-        	com[2] = commands[i][2]-1;
+        int n = 0;
+        while(n < 3) {
+        	int i = commands[n][0]-1;
+        	int j = commands[n][1]-1;
+        	int k = commands[n][2]-1;
         	
+        	int[] tmp = new int[j-i];
+        	for(int a = 0; a < tmp.length && i < j; a++) {
+        		tmp[a] = array[i++];
+        		System.out.print(tmp[a]);
+        	}
+        	Arrays.sort(tmp);
+        	System.out.println(tmp[k]);
         	
-        	
+        	n++;
         }
-     
+        
         return answer;
     }
 }

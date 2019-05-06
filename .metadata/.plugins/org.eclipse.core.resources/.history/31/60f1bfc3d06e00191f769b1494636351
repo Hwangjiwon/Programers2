@@ -1,0 +1,28 @@
+package Top;
+
+public class Main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int[] heights = {6,9,5,7,4};
+		System.out.println(solution(heights));
+	}
+	public static int[] solution(int[] heights) {
+        int[] answer = new int[heights.length];
+        
+        for(int i = heights.length-1; i > 0; i--) {
+        	for(int j = i-1; j >= 0; j--) {
+        		if(heights[i] < heights[j]) {
+        			answer[i] = j+1;
+        			break;
+        		}
+        		if(j == 0 && heights[i] >= heights[j]){
+                    answer[i] = 0;
+                    break;
+                }
+        	}
+        }
+        
+        return answer;
+    }
+}

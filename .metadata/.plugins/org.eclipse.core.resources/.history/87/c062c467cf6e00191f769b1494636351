@@ -1,0 +1,24 @@
+package Top;
+
+public class Main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int[] heights = {6,9,5,7,4};
+		System.out.println(solution(heights));
+	}
+	public static int[] solution(int[] heights) {
+        int[] answer = new int[heights.length];
+        
+        int tmp = heights[heights.length-1]; //마지막 원소
+        for(int i = heights.length-2; i >= 0; i--) { //그 앞 원소 부터 검사
+        	if(tmp < heights[i]) {
+        		//만약 앞으로 검사해가면서 tmp가 더 작으면 break;
+        		System.out.println(i);
+        		tmp--;
+        	}
+        }
+        
+        return answer;
+    }
+}
